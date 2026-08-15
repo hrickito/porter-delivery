@@ -8,7 +8,7 @@ import joblib
 @st.cache_resource
 def load_assets():
     # Add compile=False to bypass deserialization issues
-    model = load_model('delivery_model.keras', compile=False)[cite: 5]
+    model = load_model('delivery_model.keras', compile=False)
     scaler = joblib.load('scaler.pkl')[cite: 5]
     return model, scaler
 
