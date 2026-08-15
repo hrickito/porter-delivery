@@ -7,7 +7,7 @@ import joblib
 # Load the trained model and the scaler
 @st.cache_resource
 def load_assets():
-    model = load_model('delivery_model.h5')
+    model = load_model('delivery_model.keras') 
     scaler = joblib.load('scaler.pkl')
     return model, scaler
 
