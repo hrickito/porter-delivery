@@ -7,8 +7,9 @@ import joblib
 # Load the trained model and the scaler
 @st.cache_resource
 def load_assets():
-    model = load_model('delivery_model.keras') 
-    scaler = joblib.load('scaler.pkl')
+    # Add compile=False to bypass deserialization issues
+    model = load_model('delivery_model.keras', compile=False)[cite: 5]
+    scaler = joblib.load('scaler.pkl')[cite: 5]
     return model, scaler
 
 model, scaler = load_assets()
